@@ -12,8 +12,7 @@ module.exports = function configutarionService ({ operationId }) {
     const logger = makeLogger({ operation: 'update' }, { id: operationId })
     logger.info({ status: 'started', metadata: { data } })
 
-    const { id } = data
-    const { issuer } = data
+    const { id, issuer } = data
     const issuerAccount = data.issuer_account
     const issuerAgency = data.issuer_agency
     const issuerWallet = data.issuer_wallet
